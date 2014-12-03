@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace JWS
+namespace JWS.View
 {
-    public partial class Form1 : Form
+    public partial class JavaWaterSportGUI : Form
     {
-        public Form1()
+        public JavaWaterSportGUI()
         {
             InitializeComponent();
-
         }
-
-        //test
-
-
     }
 }
