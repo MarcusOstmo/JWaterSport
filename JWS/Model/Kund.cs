@@ -12,7 +12,8 @@ namespace JWS.Model
         private string förnamn;
         private string efternamn;
         private string adress;
-        private string telefon;       
+        private string telefon;
+        private string kund;
        
 
         //default konstructor
@@ -56,6 +57,15 @@ namespace JWS.Model
         public string getEfternamn()
         {
             return this.efternamn;
+        }
+
+        /// <summary>
+        /// Return kund
+        /// </summary>
+        /// <returns>kund</returns>
+        public string getKund()
+        {
+            return this.kund;
         }
 
 

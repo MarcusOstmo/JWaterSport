@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controler\JavaWaterSportList.cs" />
+    <Compile Include="Controler\KundList.cs" />
     <Compile Include="Model\Kund.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

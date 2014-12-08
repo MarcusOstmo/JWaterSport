@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JWS.Controler
 {
-    class JavaWaterSportList
+    class KundList
     {
         private List<Kund> myKund;
 
