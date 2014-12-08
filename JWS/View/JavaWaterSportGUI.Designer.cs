@@ -49,9 +49,16 @@
             this.lblPrisPerTimme = new System.Windows.Forms.Label();
             this.cbxDykinstruktör = new System.Windows.Forms.ComboBox();
             this.cbxTidDykarkurs = new System.Windows.Forms.ComboBox();
-            this.lbxAktuellKund = new System.Windows.Forms.ListBox();
+            this.lbxAktuellaKunder = new System.Windows.Forms.ListBox();
             this.btnTaBortKund = new System.Windows.Forms.Button();
             this.btnSkrivUtKund = new System.Windows.Forms.Button();
+            this.tclKundList = new System.Windows.Forms.TabControl();
+            this.tpeAktuellaKunder = new System.Windows.Forms.TabPage();
+            this.tpeTidigareKunder = new System.Windows.Forms.TabPage();
+            this.lbxTidigareKunder = new System.Windows.Forms.ListBox();
+            this.tclKundList.SuspendLayout();
+            this.tpeAktuellaKunder.SuspendLayout();
+            this.tpeTidigareKunder.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFörnamn
@@ -148,6 +155,7 @@
             this.btnRegistreraKund.TabIndex = 10;
             this.btnRegistreraKund.Text = "Registrera Kund";
             this.btnRegistreraKund.UseVisualStyleBackColor = true;
+            this.btnRegistreraKund.Click += new System.EventHandler(this.btnRegistreraKund_Click);
             // 
             // btnÄndraKunduppgifter
             // 
@@ -157,6 +165,7 @@
             this.btnÄndraKunduppgifter.TabIndex = 11;
             this.btnÄndraKunduppgifter.Text = "Ändra Kunduppgifter";
             this.btnÄndraKunduppgifter.UseVisualStyleBackColor = true;
+            this.btnÄndraKunduppgifter.Click += new System.EventHandler(this.btnÄndraKunduppgifter_Click);
             // 
             // cbxTidStortPaket
             // 
@@ -200,6 +209,7 @@
             this.btnBokaDykarkurs.TabIndex = 16;
             this.btnBokaDykarkurs.Text = "Boka Dykarkurs";
             this.btnBokaDykarkurs.UseVisualStyleBackColor = true;
+            this.btnBokaDykarkurs.Click += new System.EventHandler(this.btnBokaDykarkurs_Click);
             // 
             // btnÄndraKursuppgifter
             // 
@@ -209,6 +219,7 @@
             this.btnÄndraKursuppgifter.TabIndex = 17;
             this.btnÄndraKursuppgifter.Text = "Ändra Kursuppgifter";
             this.btnÄndraKursuppgifter.UseVisualStyleBackColor = true;
+            this.btnÄndraKursuppgifter.Click += new System.EventHandler(this.btnÄndraKursuppgifter_Click);
             // 
             // lblPrisPerTimme
             // 
@@ -235,13 +246,13 @@
             this.cbxTidDykarkurs.Size = new System.Drawing.Size(71, 21);
             this.cbxTidDykarkurs.TabIndex = 20;
             // 
-            // lbxAktuellKund
+            // lbxAktuellaKunder
             // 
-            this.lbxAktuellKund.FormattingEnabled = true;
-            this.lbxAktuellKund.Location = new System.Drawing.Point(533, 23);
-            this.lbxAktuellKund.Name = "lbxAktuellKund";
-            this.lbxAktuellKund.Size = new System.Drawing.Size(652, 433);
-            this.lbxAktuellKund.TabIndex = 21;
+            this.lbxAktuellaKunder.FormattingEnabled = true;
+            this.lbxAktuellaKunder.Location = new System.Drawing.Point(3, 0);
+            this.lbxAktuellaKunder.Name = "lbxAktuellaKunder";
+            this.lbxAktuellaKunder.Size = new System.Drawing.Size(656, 433);
+            this.lbxAktuellaKunder.TabIndex = 21;
             // 
             // btnTaBortKund
             // 
@@ -251,6 +262,7 @@
             this.btnTaBortKund.TabIndex = 22;
             this.btnTaBortKund.Text = "Ta Bort Kund";
             this.btnTaBortKund.UseVisualStyleBackColor = true;
+            this.btnTaBortKund.Click += new System.EventHandler(this.btnTaBortKund_Click);
             // 
             // btnSkrivUtKund
             // 
@@ -260,15 +272,56 @@
             this.btnSkrivUtKund.TabIndex = 23;
             this.btnSkrivUtKund.Text = "Skriv Ut Kvitto";
             this.btnSkrivUtKund.UseVisualStyleBackColor = true;
+            this.btnSkrivUtKund.Click += new System.EventHandler(this.btnSkrivUtKund_Click);
+            // 
+            // tclKundList
+            // 
+            this.tclKundList.Controls.Add(this.tpeAktuellaKunder);
+            this.tclKundList.Controls.Add(this.tpeTidigareKunder);
+            this.tclKundList.Location = new System.Drawing.Point(533, 12);
+            this.tclKundList.Name = "tclKundList";
+            this.tclKundList.SelectedIndex = 0;
+            this.tclKundList.Size = new System.Drawing.Size(667, 455);
+            this.tclKundList.TabIndex = 24;
+            // 
+            // tpeAktuellaKunder
+            // 
+            this.tpeAktuellaKunder.Controls.Add(this.lbxAktuellaKunder);
+            this.tpeAktuellaKunder.Location = new System.Drawing.Point(4, 22);
+            this.tpeAktuellaKunder.Name = "tpeAktuellaKunder";
+            this.tpeAktuellaKunder.Padding = new System.Windows.Forms.Padding(3);
+            this.tpeAktuellaKunder.Size = new System.Drawing.Size(659, 429);
+            this.tpeAktuellaKunder.TabIndex = 0;
+            this.tpeAktuellaKunder.Text = "Aktuella Kunder";
+            this.tpeAktuellaKunder.UseVisualStyleBackColor = true;
+            // 
+            // tpeTidigareKunder
+            // 
+            this.tpeTidigareKunder.Controls.Add(this.lbxTidigareKunder);
+            this.tpeTidigareKunder.Location = new System.Drawing.Point(4, 22);
+            this.tpeTidigareKunder.Name = "tpeTidigareKunder";
+            this.tpeTidigareKunder.Padding = new System.Windows.Forms.Padding(3);
+            this.tpeTidigareKunder.Size = new System.Drawing.Size(659, 429);
+            this.tpeTidigareKunder.TabIndex = 1;
+            this.tpeTidigareKunder.Text = "Tidigare Kunder";
+            this.tpeTidigareKunder.UseVisualStyleBackColor = true;
+            // 
+            // lbxTidigareKunder
+            // 
+            this.lbxTidigareKunder.FormattingEnabled = true;
+            this.lbxTidigareKunder.Location = new System.Drawing.Point(3, 0);
+            this.lbxTidigareKunder.Name = "lbxTidigareKunder";
+            this.lbxTidigareKunder.Size = new System.Drawing.Size(656, 433);
+            this.lbxTidigareKunder.TabIndex = 25;
             // 
             // JavaWaterSportGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 516);
+            this.Controls.Add(this.tclKundList);
             this.Controls.Add(this.btnSkrivUtKund);
             this.Controls.Add(this.btnTaBortKund);
-            this.Controls.Add(this.lbxAktuellKund);
             this.Controls.Add(this.cbxTidDykarkurs);
             this.Controls.Add(this.cbxDykinstruktör);
             this.Controls.Add(this.lblPrisPerTimme);
@@ -292,6 +345,9 @@
             this.Controls.Add(this.lblFörnamn);
             this.Name = "JavaWaterSportGUI";
             this.Text = "Form1";
+            this.tclKundList.ResumeLayout(false);
+            this.tpeAktuellaKunder.ResumeLayout(false);
+            this.tpeTidigareKunder.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,8 +376,12 @@
         private System.Windows.Forms.Label lblPrisPerTimme;
         private System.Windows.Forms.ComboBox cbxDykinstruktör;
         private System.Windows.Forms.ComboBox cbxTidDykarkurs;
-        private System.Windows.Forms.ListBox lbxAktuellKund;
+        private System.Windows.Forms.ListBox lbxAktuellaKunder;
         private System.Windows.Forms.Button btnTaBortKund;
         private System.Windows.Forms.Button btnSkrivUtKund;
+        private System.Windows.Forms.TabControl tclKundList;
+        private System.Windows.Forms.TabPage tpeAktuellaKunder;
+        private System.Windows.Forms.TabPage tpeTidigareKunder;
+        private System.Windows.Forms.ListBox lbxTidigareKunder;
     }
 }
