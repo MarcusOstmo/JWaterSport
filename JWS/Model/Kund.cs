@@ -16,7 +16,7 @@ namespace JWS.Model
         private string kund;
        
 
-        //default konstructor
+        //default konstruktor
         public Kund()
         {
             this.förnamn = "null";
@@ -125,5 +125,12 @@ namespace JWS.Model
             this.telefon = Telefon;
         }
         #endregion
+
+        public override string ToString()
+        {
+            string response = this.förnamn + "\n" + this.efternamn + "\n" + this.adress + "\n" + this.telefon;
+
+            return response;
+        }
     }
 }
