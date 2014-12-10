@@ -39,7 +39,7 @@
             this.rbnFulltPaket = new System.Windows.Forms.RadioButton();
             this.btnRegistreraKund = new System.Windows.Forms.Button();
             this.btnÄndraKunduppgifter = new System.Windows.Forms.Button();
-            this.cbxFulltPaket = new System.Windows.Forms.ComboBox();
+            this.cbxFulltPaketTid = new System.Windows.Forms.ComboBox();
             this.lblRegistreraKund = new System.Windows.Forms.Label();
             this.lblBokaDykarkurs = new System.Windows.Forms.Label();
             this.btnBokaDykarkurs = new System.Windows.Forms.Button();
@@ -154,13 +154,13 @@
             this.btnÄndraKunduppgifter.UseVisualStyleBackColor = true;
             this.btnÄndraKunduppgifter.Click += new System.EventHandler(this.btnÄndraKunduppgifter_Click);
             // 
-            // cbxFulltPaket
+            // cbxFulltPaketTid
             // 
-            this.cbxFulltPaket.FormattingEnabled = true;
-            this.cbxFulltPaket.Location = new System.Drawing.Point(115, 229);
-            this.cbxFulltPaket.Name = "cbxFulltPaket";
-            this.cbxFulltPaket.Size = new System.Drawing.Size(72, 21);
-            this.cbxFulltPaket.TabIndex = 12;
+            this.cbxFulltPaketTid.FormattingEnabled = true;
+            this.cbxFulltPaketTid.Location = new System.Drawing.Point(115, 229);
+            this.cbxFulltPaketTid.Name = "cbxFulltPaketTid";
+            this.cbxFulltPaketTid.Size = new System.Drawing.Size(72, 21);
+            this.cbxFulltPaketTid.TabIndex = 12;
             // 
             // lblRegistreraKund
             // 
@@ -308,7 +308,7 @@
             this.Controls.Add(this.btnBokaDykarkurs);
             this.Controls.Add(this.lblBokaDykarkurs);
             this.Controls.Add(this.lblRegistreraKund);
-            this.Controls.Add(this.cbxFulltPaket);
+            this.Controls.Add(this.cbxFulltPaketTid);
             this.Controls.Add(this.btnÄndraKunduppgifter);
             this.Controls.Add(this.btnRegistreraKund);
             this.Controls.Add(this.rbnFulltPaket);
@@ -343,7 +343,7 @@
         private System.Windows.Forms.RadioButton rbnFulltPaket;
         private System.Windows.Forms.Button btnRegistreraKund;
         private System.Windows.Forms.Button btnÄndraKunduppgifter;
-        private System.Windows.Forms.ComboBox cbxFulltPaket;
+        private System.Windows.Forms.ComboBox cbxFulltPaketTid;
         private System.Windows.Forms.Label lblRegistreraKund;
         private System.Windows.Forms.Label lblBokaDykarkurs;
         private System.Windows.Forms.Button btnBokaDykarkurs;
