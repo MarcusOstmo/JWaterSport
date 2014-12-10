@@ -38,7 +38,7 @@ namespace JWS.View
         private void updateListView()
         {
             lvwAktuellaKunder.Items.Clear();
-            string[] columns = new string[5];
+            string[] columns = new string[6];
             ListViewItem item;
             for (int i = 0; i < AktuellaKunder.Count(); i++)
             {
@@ -46,7 +46,8 @@ namespace JWS.View
                 columns[1] = AktuellaKunder.Get(i).getEfternamn();
                 columns[2] = AktuellaKunder.Get(i).getAdress();
                 columns[3] = AktuellaKunder.Get(i).getTelefon();
-                columns[4] = AktuellaKunder.Get(i).getFulltPaket().ToString();
+                columns[4] = AktuellaKunder.Get(i).getFulltPaket();
+                //columns[5] = AktuellaKunder.Get(i).get();
                 item = new ListViewItem(columns);
                 lvwAktuellaKunder.Items.Add(item);
             }

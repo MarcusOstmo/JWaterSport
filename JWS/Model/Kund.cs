@@ -19,16 +19,16 @@ namespace JWS.Model
          
        
 
-        //default konstruktor
-        //public Kund()
-        //{
-        //    this.förnamn = "null";
-        //    this.efternamn = "null";
-        //    this.adress = "null";
-        //    this.telefon = "null";
-        //    this.paketTid = "null";
-        //    this.stortPaket = false;
-        //}
+        // default konstruktor
+        public Kund()
+        {
+            this.förnamn = "null";
+            this.efternamn = "null";
+            this.adress = "null";
+            this.telefon = "null";
+            this.fulltPaketTid = "null";
+            this.fulltPaket = false;
+        }
 
         /// <summary>
         /// Konstruktor
@@ -37,13 +37,13 @@ namespace JWS.Model
         /// <param name="Efternamn">Kundens efternamn</param>
         /// <param name="Adress">Kundens adress</param>
         /// <param name="Telefon">Kundens telefonnummer</param>
-        public Kund(string Förnamn, string Efternamn, string Adress, string Telefon, string fulltPaketTid, bool FulltPaket)
+        public Kund(string Förnamn, string Efternamn, string Adress, string Telefon, string FulltPaketTid, bool FulltPaket)
         {
             this.förnamn = Förnamn;
             this.efternamn = Efternamn;
             this.adress = Adress;
             this.telefon = Telefon;
-            this.fulltPaketTid = fulltPaketTid;
+            this.fulltPaketTid = FulltPaketTid;
             this.fulltPaket = FulltPaket;
         }
 
@@ -98,7 +98,7 @@ namespace JWS.Model
         /// Return pakettid
         /// </summary>
         /// <returns>paketTid</returns>
-        public string getfulltPaketTid()
+        public string getFulltPaketTid()
         {
             return this.fulltPaketTid;
         }
@@ -107,9 +107,17 @@ namespace JWS.Model
         /// Return fullt paket
         /// </summary>
         /// <returns>fulltPaket</returns>
-        public bool getFulltPaket()
+        public string getFulltPaket()
         {
-            return this.fulltPaket;
+            if (fulltPaket == true)
+            {
+                return "JA";
+            }
+
+            else
+            {
+                return "Nej";
+            }
         }
 
         #endregion 
