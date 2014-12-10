@@ -14,16 +14,21 @@ namespace JWS.Model
         private string adress;
         private string telefon;
         private string kund;
+        private string paketTid;
+        private bool stortPaket;
+         
        
 
         //default konstruktor
-        public Kund()
-        {
-            this.förnamn = "null";
-            this.efternamn = "null";
-            this.adress = "null";
-            this.telefon = "null";
-        }
+        //public Kund()
+        //{
+        //    this.förnamn = "null";
+        //    this.efternamn = "null";
+        //    this.adress = "null";
+        //    this.telefon = "null";
+        //    this.paketTid = "null";
+        //    this.stortPaket = false;
+        //}
 
         /// <summary>
         /// Konstruktor
@@ -32,12 +37,14 @@ namespace JWS.Model
         /// <param name="Efternamn">Kundens efternamn</param>
         /// <param name="Adress">Kundens adress</param>
         /// <param name="Telefon">Kundens telefonnummer</param>
-        public Kund(string Förnamn, string Efternamn, string Adress, string Telefon)
+        public Kund(string Förnamn, string Efternamn, string Adress, string Telefon, string PaketTid, bool StortPaket)
         {
             this.förnamn = Förnamn;
             this.efternamn = Efternamn;
             this.adress = Adress;
             this.telefon = Telefon;
+            this.paketTid = PaketTid;
+            this.stortPaket = StortPaket;
         }
 
         #region Get
@@ -86,6 +93,25 @@ namespace JWS.Model
         {
             return this.telefon;
         }
+
+        /// <summary>
+        /// Return pakettid
+        /// </summary>
+        /// <returns>paketTid</returns>
+        public string getPaketTid()
+        {
+            return this.paketTid;
+        }
+
+        /// <summary>
+        /// Return Stort paket
+        /// </summary>
+        /// <returns>stortPaket</returns>
+        public bool getStortPaket()
+        {
+            return this.stortPaket;
+        }
+
         #endregion 
 
         #region Set
@@ -124,6 +150,25 @@ namespace JWS.Model
         {
             this.telefon = Telefon;
         }
+
+        /// <summary>
+        /// Set PaketTid
+        /// </summary>
+        /// <param name="PaketTid">Tiden kunden hyr ett paket</param>
+        public void setPaketTid(string PaketTid)
+        {
+            this.paketTid = PaketTid;
+        }
+
+        /// <summary>
+        /// Set StortPaket
+        /// </summary>
+        /// <param name="StortPaket">Om kunden har bokat stort paket</param>
+        public void setStortPaket(bool StortPaket)
+        {
+            this.stortPaket = StortPaket;
+        }
+
         #endregion
 
         public override string ToString()
