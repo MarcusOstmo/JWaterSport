@@ -173,7 +173,7 @@ namespace JWS.Model
 
         public override string ToString()
         {
-            string response = this.förnamn + "\n" + this.efternamn + "\n" + this.adress + "\n" + this.telefon;
+            string response = this.förnamn + "\n" + this.efternamn + "\n" + this.adress + "\n" + this.telefon + "\n" + this.fulltPaket;
 
             return response;
         }
