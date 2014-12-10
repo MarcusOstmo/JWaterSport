@@ -14,8 +14,8 @@ namespace JWS.Model
         private string adress;
         private string telefon;
         private string kund;
-        private string paketTid;
-        private bool stortPaket;
+        private string fulltPaketTid;
+        private bool fulltPaket;
          
        
 
@@ -37,14 +37,14 @@ namespace JWS.Model
         /// <param name="Efternamn">Kundens efternamn</param>
         /// <param name="Adress">Kundens adress</param>
         /// <param name="Telefon">Kundens telefonnummer</param>
-        public Kund(string Förnamn, string Efternamn, string Adress, string Telefon, string PaketTid, bool StortPaket)
+        public Kund(string Förnamn, string Efternamn, string Adress, string Telefon, string fulltPaketTid, bool FulltPaket)
         {
             this.förnamn = Förnamn;
             this.efternamn = Efternamn;
             this.adress = Adress;
             this.telefon = Telefon;
-            this.paketTid = PaketTid;
-            this.stortPaket = StortPaket;
+            this.fulltPaketTid = fulltPaketTid;
+            this.fulltPaket = FulltPaket;
         }
 
         #region Get
@@ -98,18 +98,18 @@ namespace JWS.Model
         /// Return pakettid
         /// </summary>
         /// <returns>paketTid</returns>
-        public string getPaketTid()
+        public string getfulltPaketTid()
         {
-            return this.paketTid;
+            return this.fulltPaketTid;
         }
 
         /// <summary>
-        /// Return Stort paket
+        /// Return fullt paket
         /// </summary>
-        /// <returns>stortPaket</returns>
-        public bool getStortPaket()
+        /// <returns>fulltPaket</returns>
+        public bool getFulltPaket()
         {
-            return this.stortPaket;
+            return this.fulltPaket;
         }
 
         #endregion 
@@ -155,18 +155,18 @@ namespace JWS.Model
         /// Set PaketTid
         /// </summary>
         /// <param name="PaketTid">Tiden kunden hyr ett paket</param>
-        public void setPaketTid(string PaketTid)
+        public void setfulltPaketTid(string fulltPaketTid)
         {
-            this.paketTid = PaketTid;
+            this.fulltPaketTid = fulltPaketTid;
         }
 
         /// <summary>
-        /// Set StortPaket
+        /// Set FulltPaket
         /// </summary>
         /// <param name="StortPaket">Om kunden har bokat stort paket</param>
-        public void setStortPaket(bool StortPaket)
+        public void setFulltPaket(bool FulltPaket)
         {
-            this.stortPaket = StortPaket;
+            this.fulltPaket = FulltPaket;
         }
 
         #endregion
