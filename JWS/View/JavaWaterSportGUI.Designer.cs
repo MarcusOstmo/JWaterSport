@@ -36,12 +36,10 @@
             this.tbxEfternamn = new System.Windows.Forms.TextBox();
             this.tbxAdress = new System.Windows.Forms.TextBox();
             this.tbxTelefon = new System.Windows.Forms.TextBox();
-            this.rbnStortPaket = new System.Windows.Forms.RadioButton();
-            this.rbnEndast = new System.Windows.Forms.RadioButton();
+            this.rbnFulltPaket = new System.Windows.Forms.RadioButton();
             this.btnRegistreraKund = new System.Windows.Forms.Button();
             this.btnÄndraKunduppgifter = new System.Windows.Forms.Button();
-            this.cbxTidStortPaket = new System.Windows.Forms.ComboBox();
-            this.cbxTidEndast = new System.Windows.Forms.ComboBox();
+            this.cbxFulltPaket = new System.Windows.Forms.ComboBox();
             this.lblRegistreraKund = new System.Windows.Forms.Label();
             this.lblBokaDykarkurs = new System.Windows.Forms.Label();
             this.btnBokaDykarkurs = new System.Windows.Forms.Button();
@@ -49,13 +47,13 @@
             this.lblPrisPerTimme = new System.Windows.Forms.Label();
             this.cbxDykinstruktör = new System.Windows.Forms.ComboBox();
             this.cbxTidDykarkurs = new System.Windows.Forms.ComboBox();
-            this.lbxAktuellaKunder = new System.Windows.Forms.ListBox();
             this.btnTaBortKund = new System.Windows.Forms.Button();
             this.btnSkrivUtKund = new System.Windows.Forms.Button();
             this.tclKundList = new System.Windows.Forms.TabControl();
             this.tpeAktuellaKunder = new System.Windows.Forms.TabPage();
             this.tpeTidigareKunder = new System.Windows.Forms.TabPage();
-            this.lbxTidigareKunder = new System.Windows.Forms.ListBox();
+            this.lvwTidigareKunder = new System.Windows.Forms.ListView();
+            this.lvwAktuellaKunder = new System.Windows.Forms.ListView();
             this.tclKundList.SuspendLayout();
             this.tpeAktuellaKunder.SuspendLayout();
             this.tpeTidigareKunder.SuspendLayout();
@@ -125,27 +123,16 @@
             this.tbxTelefon.Size = new System.Drawing.Size(100, 20);
             this.tbxTelefon.TabIndex = 7;
             // 
-            // rbnStortPaket
+            // rbnFulltPaket
             // 
-            this.rbnStortPaket.AutoSize = true;
-            this.rbnStortPaket.Location = new System.Drawing.Point(23, 229);
-            this.rbnStortPaket.Name = "rbnStortPaket";
-            this.rbnStortPaket.Size = new System.Drawing.Size(78, 17);
-            this.rbnStortPaket.TabIndex = 8;
-            this.rbnStortPaket.TabStop = true;
-            this.rbnStortPaket.Text = "Stort Paket";
-            this.rbnStortPaket.UseVisualStyleBackColor = true;
-            // 
-            // rbnEndast
-            // 
-            this.rbnEndast.AutoSize = true;
-            this.rbnEndast.Location = new System.Drawing.Point(23, 275);
-            this.rbnEndast.Name = "rbnEndast";
-            this.rbnEndast.Size = new System.Drawing.Size(58, 17);
-            this.rbnEndast.TabIndex = 9;
-            this.rbnEndast.TabStop = true;
-            this.rbnEndast.Text = "Endast";
-            this.rbnEndast.UseVisualStyleBackColor = true;
+            this.rbnFulltPaket.AutoSize = true;
+            this.rbnFulltPaket.Location = new System.Drawing.Point(23, 229);
+            this.rbnFulltPaket.Name = "rbnFulltPaket";
+            this.rbnFulltPaket.Size = new System.Drawing.Size(75, 17);
+            this.rbnFulltPaket.TabIndex = 8;
+            this.rbnFulltPaket.TabStop = true;
+            this.rbnFulltPaket.Text = "Fullt Paket";
+            this.rbnFulltPaket.UseVisualStyleBackColor = true;
             // 
             // btnRegistreraKund
             // 
@@ -167,21 +154,13 @@
             this.btnÄndraKunduppgifter.UseVisualStyleBackColor = true;
             this.btnÄndraKunduppgifter.Click += new System.EventHandler(this.btnÄndraKunduppgifter_Click);
             // 
-            // cbxTidStortPaket
+            // cbxFulltPaket
             // 
-            this.cbxTidStortPaket.FormattingEnabled = true;
-            this.cbxTidStortPaket.Location = new System.Drawing.Point(115, 229);
-            this.cbxTidStortPaket.Name = "cbxTidStortPaket";
-            this.cbxTidStortPaket.Size = new System.Drawing.Size(72, 21);
-            this.cbxTidStortPaket.TabIndex = 12;
-            // 
-            // cbxTidEndast
-            // 
-            this.cbxTidEndast.FormattingEnabled = true;
-            this.cbxTidEndast.Location = new System.Drawing.Point(115, 275);
-            this.cbxTidEndast.Name = "cbxTidEndast";
-            this.cbxTidEndast.Size = new System.Drawing.Size(72, 21);
-            this.cbxTidEndast.TabIndex = 13;
+            this.cbxFulltPaket.FormattingEnabled = true;
+            this.cbxFulltPaket.Location = new System.Drawing.Point(115, 229);
+            this.cbxFulltPaket.Name = "cbxFulltPaket";
+            this.cbxFulltPaket.Size = new System.Drawing.Size(72, 21);
+            this.cbxFulltPaket.TabIndex = 12;
             // 
             // lblRegistreraKund
             // 
@@ -246,14 +225,6 @@
             this.cbxTidDykarkurs.Size = new System.Drawing.Size(71, 21);
             this.cbxTidDykarkurs.TabIndex = 20;
             // 
-            // lbxAktuellaKunder
-            // 
-            this.lbxAktuellaKunder.FormattingEnabled = true;
-            this.lbxAktuellaKunder.Location = new System.Drawing.Point(3, 0);
-            this.lbxAktuellaKunder.Name = "lbxAktuellaKunder";
-            this.lbxAktuellaKunder.Size = new System.Drawing.Size(656, 433);
-            this.lbxAktuellaKunder.TabIndex = 21;
-            // 
             // btnTaBortKund
             // 
             this.btnTaBortKund.Location = new System.Drawing.Point(533, 473);
@@ -286,7 +257,7 @@
             // 
             // tpeAktuellaKunder
             // 
-            this.tpeAktuellaKunder.Controls.Add(this.lbxAktuellaKunder);
+            this.tpeAktuellaKunder.Controls.Add(this.lvwAktuellaKunder);
             this.tpeAktuellaKunder.Location = new System.Drawing.Point(4, 22);
             this.tpeAktuellaKunder.Name = "tpeAktuellaKunder";
             this.tpeAktuellaKunder.Padding = new System.Windows.Forms.Padding(3);
@@ -297,7 +268,7 @@
             // 
             // tpeTidigareKunder
             // 
-            this.tpeTidigareKunder.Controls.Add(this.lbxTidigareKunder);
+            this.tpeTidigareKunder.Controls.Add(this.lvwTidigareKunder);
             this.tpeTidigareKunder.Location = new System.Drawing.Point(4, 22);
             this.tpeTidigareKunder.Name = "tpeTidigareKunder";
             this.tpeTidigareKunder.Padding = new System.Windows.Forms.Padding(3);
@@ -306,13 +277,21 @@
             this.tpeTidigareKunder.Text = "Tidigare Kunder";
             this.tpeTidigareKunder.UseVisualStyleBackColor = true;
             // 
-            // lbxTidigareKunder
+            // lvwTidigareKunder
             // 
-            this.lbxTidigareKunder.FormattingEnabled = true;
-            this.lbxTidigareKunder.Location = new System.Drawing.Point(3, 0);
-            this.lbxTidigareKunder.Name = "lbxTidigareKunder";
-            this.lbxTidigareKunder.Size = new System.Drawing.Size(656, 433);
-            this.lbxTidigareKunder.TabIndex = 25;
+            this.lvwTidigareKunder.Location = new System.Drawing.Point(3, 3);
+            this.lvwTidigareKunder.Name = "lvwTidigareKunder";
+            this.lvwTidigareKunder.Size = new System.Drawing.Size(653, 423);
+            this.lvwTidigareKunder.TabIndex = 25;
+            this.lvwTidigareKunder.UseCompatibleStateImageBehavior = false;
+            // 
+            // lvwAktuellaKunder
+            // 
+            this.lvwAktuellaKunder.Location = new System.Drawing.Point(3, 3);
+            this.lvwAktuellaKunder.Name = "lvwAktuellaKunder";
+            this.lvwAktuellaKunder.Size = new System.Drawing.Size(653, 423);
+            this.lvwAktuellaKunder.TabIndex = 26;
+            this.lvwAktuellaKunder.UseCompatibleStateImageBehavior = false;
             // 
             // JavaWaterSportGUI
             // 
@@ -329,12 +308,10 @@
             this.Controls.Add(this.btnBokaDykarkurs);
             this.Controls.Add(this.lblBokaDykarkurs);
             this.Controls.Add(this.lblRegistreraKund);
-            this.Controls.Add(this.cbxTidEndast);
-            this.Controls.Add(this.cbxTidStortPaket);
+            this.Controls.Add(this.cbxFulltPaket);
             this.Controls.Add(this.btnÄndraKunduppgifter);
             this.Controls.Add(this.btnRegistreraKund);
-            this.Controls.Add(this.rbnEndast);
-            this.Controls.Add(this.rbnStortPaket);
+            this.Controls.Add(this.rbnFulltPaket);
             this.Controls.Add(this.tbxTelefon);
             this.Controls.Add(this.tbxAdress);
             this.Controls.Add(this.tbxEfternamn);
@@ -363,12 +340,10 @@
         private System.Windows.Forms.TextBox tbxEfternamn;
         private System.Windows.Forms.TextBox tbxAdress;
         private System.Windows.Forms.TextBox tbxTelefon;
-        private System.Windows.Forms.RadioButton rbnStortPaket;
-        private System.Windows.Forms.RadioButton rbnEndast;
+        private System.Windows.Forms.RadioButton rbnFulltPaket;
         private System.Windows.Forms.Button btnRegistreraKund;
         private System.Windows.Forms.Button btnÄndraKunduppgifter;
-        private System.Windows.Forms.ComboBox cbxTidStortPaket;
-        private System.Windows.Forms.ComboBox cbxTidEndast;
+        private System.Windows.Forms.ComboBox cbxFulltPaket;
         private System.Windows.Forms.Label lblRegistreraKund;
         private System.Windows.Forms.Label lblBokaDykarkurs;
         private System.Windows.Forms.Button btnBokaDykarkurs;
@@ -376,12 +351,12 @@
         private System.Windows.Forms.Label lblPrisPerTimme;
         private System.Windows.Forms.ComboBox cbxDykinstruktör;
         private System.Windows.Forms.ComboBox cbxTidDykarkurs;
-        private System.Windows.Forms.ListBox lbxAktuellaKunder;
         private System.Windows.Forms.Button btnTaBortKund;
         private System.Windows.Forms.Button btnSkrivUtKund;
         private System.Windows.Forms.TabControl tclKundList;
         private System.Windows.Forms.TabPage tpeAktuellaKunder;
         private System.Windows.Forms.TabPage tpeTidigareKunder;
-        private System.Windows.Forms.ListBox lbxTidigareKunder;
+        private System.Windows.Forms.ListView lvwAktuellaKunder;
+        private System.Windows.Forms.ListView lvwTidigareKunder;
     }
 }
