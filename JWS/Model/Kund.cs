@@ -101,13 +101,13 @@ namespace JWS.Model
         public string getFulltPaketOchPakettid()
         {
             if (fulltPaket == true)
-            {
-                return "Ja" + "\t" + this.fulltPaketTid;
-            }
+            {                
+                return "Ja   " + this.fulltPaketTid;
+            }           
 
             else
             {
-                return "Nej" + "\t" + this.fulltPaketTid;
+                return "Nej  " + this.fulltPaketTid;
             }
         }
 

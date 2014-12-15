@@ -55,6 +55,10 @@ namespace JWS.View
 
         private void btnRegistreraKund_Click(object sender, EventArgs e)
         {
+            if (cbxFulltPaketTid.Text == "Välj hyrtid")
+            {
+                MessageBox.Show("Ange tid utrustning ska hyras!");
+            }
             Kund item = new Kund(tbxFörnamn.Text, tbxEfternamn.Text, tbxAdress.Text, tbxTelefon.Text, (string)cbxFulltPaketTid.SelectedItem, cbxFulltPaket.Checked);
             AktuellaKunder.Add(item);
             updateListView();
