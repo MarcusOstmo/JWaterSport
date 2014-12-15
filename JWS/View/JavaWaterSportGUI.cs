@@ -55,7 +55,7 @@ namespace JWS.View
 
         private void btnRegistreraKund_Click(object sender, EventArgs e)
         {
-            Kund item = new Kund(tbxFörnamn.Text, tbxEfternamn.Text, tbxAdress.Text, tbxTelefon.Text, cbxFulltPaketTid.SelectedText, rbnFulltPaket.Checked);
+            Kund item = new Kund(tbxFörnamn.Text, tbxEfternamn.Text, tbxAdress.Text, tbxTelefon.Text, cbxFulltPaketTid.SelectedText, cbxFulltPaket.Checked);
             AktuellaKunder.Add(item);
             updateListView();
         }

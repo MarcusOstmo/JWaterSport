@@ -36,7 +36,6 @@
             this.tbxEfternamn = new System.Windows.Forms.TextBox();
             this.tbxAdress = new System.Windows.Forms.TextBox();
             this.tbxTelefon = new System.Windows.Forms.TextBox();
-            this.rbnFulltPaket = new System.Windows.Forms.RadioButton();
             this.btnRegistreraKund = new System.Windows.Forms.Button();
             this.btnÄndraKunduppgifter = new System.Windows.Forms.Button();
             this.cbxFulltPaketTid = new System.Windows.Forms.ComboBox();
@@ -51,9 +50,10 @@
             this.btnSkrivUtKund = new System.Windows.Forms.Button();
             this.tclKundList = new System.Windows.Forms.TabControl();
             this.tpeAktuellaKunder = new System.Windows.Forms.TabPage();
+            this.lvwAktuellaKunder = new System.Windows.Forms.ListView();
             this.tpeTidigareKunder = new System.Windows.Forms.TabPage();
             this.lvwTidigareKunder = new System.Windows.Forms.ListView();
-            this.lvwAktuellaKunder = new System.Windows.Forms.ListView();
+            this.cbxFulltPaket = new System.Windows.Forms.CheckBox();
             this.tclKundList.SuspendLayout();
             this.tpeAktuellaKunder.SuspendLayout();
             this.tpeTidigareKunder.SuspendLayout();
@@ -122,17 +122,6 @@
             this.tbxTelefon.Name = "tbxTelefon";
             this.tbxTelefon.Size = new System.Drawing.Size(100, 20);
             this.tbxTelefon.TabIndex = 7;
-            // 
-            // rbnFulltPaket
-            // 
-            this.rbnFulltPaket.AutoSize = true;
-            this.rbnFulltPaket.Location = new System.Drawing.Point(23, 229);
-            this.rbnFulltPaket.Name = "rbnFulltPaket";
-            this.rbnFulltPaket.Size = new System.Drawing.Size(75, 17);
-            this.rbnFulltPaket.TabIndex = 8;
-            this.rbnFulltPaket.TabStop = true;
-            this.rbnFulltPaket.Text = "Fullt Paket";
-            this.rbnFulltPaket.UseVisualStyleBackColor = true;
             // 
             // btnRegistreraKund
             // 
@@ -266,6 +255,14 @@
             this.tpeAktuellaKunder.Text = "Aktuella Kunder";
             this.tpeAktuellaKunder.UseVisualStyleBackColor = true;
             // 
+            // lvwAktuellaKunder
+            // 
+            this.lvwAktuellaKunder.Location = new System.Drawing.Point(3, 3);
+            this.lvwAktuellaKunder.Name = "lvwAktuellaKunder";
+            this.lvwAktuellaKunder.Size = new System.Drawing.Size(653, 423);
+            this.lvwAktuellaKunder.TabIndex = 26;
+            this.lvwAktuellaKunder.UseCompatibleStateImageBehavior = false;
+            // 
             // tpeTidigareKunder
             // 
             this.tpeTidigareKunder.Controls.Add(this.lvwTidigareKunder);
@@ -285,19 +282,22 @@
             this.lvwTidigareKunder.TabIndex = 25;
             this.lvwTidigareKunder.UseCompatibleStateImageBehavior = false;
             // 
-            // lvwAktuellaKunder
+            // cbxFulltPaket
             // 
-            this.lvwAktuellaKunder.Location = new System.Drawing.Point(3, 3);
-            this.lvwAktuellaKunder.Name = "lvwAktuellaKunder";
-            this.lvwAktuellaKunder.Size = new System.Drawing.Size(653, 423);
-            this.lvwAktuellaKunder.TabIndex = 26;
-            this.lvwAktuellaKunder.UseCompatibleStateImageBehavior = false;
+            this.cbxFulltPaket.AutoSize = true;
+            this.cbxFulltPaket.Location = new System.Drawing.Point(25, 229);
+            this.cbxFulltPaket.Name = "cbxFulltPaket";
+            this.cbxFulltPaket.Size = new System.Drawing.Size(76, 17);
+            this.cbxFulltPaket.TabIndex = 25;
+            this.cbxFulltPaket.Text = "Fullt Paket";
+            this.cbxFulltPaket.UseVisualStyleBackColor = true;
             // 
             // JavaWaterSportGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 516);
+            this.Controls.Add(this.cbxFulltPaket);
             this.Controls.Add(this.tclKundList);
             this.Controls.Add(this.btnSkrivUtKund);
             this.Controls.Add(this.btnTaBortKund);
@@ -311,7 +311,6 @@
             this.Controls.Add(this.cbxFulltPaketTid);
             this.Controls.Add(this.btnÄndraKunduppgifter);
             this.Controls.Add(this.btnRegistreraKund);
-            this.Controls.Add(this.rbnFulltPaket);
             this.Controls.Add(this.tbxTelefon);
             this.Controls.Add(this.tbxAdress);
             this.Controls.Add(this.tbxEfternamn);
@@ -340,7 +339,6 @@
         private System.Windows.Forms.TextBox tbxEfternamn;
         private System.Windows.Forms.TextBox tbxAdress;
         private System.Windows.Forms.TextBox tbxTelefon;
-        private System.Windows.Forms.RadioButton rbnFulltPaket;
         private System.Windows.Forms.Button btnRegistreraKund;
         private System.Windows.Forms.Button btnÄndraKunduppgifter;
         private System.Windows.Forms.ComboBox cbxFulltPaketTid;
@@ -358,5 +356,6 @@
         private System.Windows.Forms.TabPage tpeTidigareKunder;
         private System.Windows.Forms.ListView lvwAktuellaKunder;
         private System.Windows.Forms.ListView lvwTidigareKunder;
+        private System.Windows.Forms.CheckBox cbxFulltPaket;
     }
 }
