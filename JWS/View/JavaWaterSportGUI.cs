@@ -55,13 +55,21 @@ namespace JWS.View
 
         private void btnRegistreraKund_Click(object sender, EventArgs e)
         {
-            if (cbxFulltPaketTid.Text == "Välj hyrtid")
+            if (cbxFulltPaket.Checked == true && cbxFulltPaketTid.Text == "Välj hyrtid")
             {
                 MessageBox.Show("Ange tid utrustning ska hyras!");
             }
-            Kund item = new Kund(tbxFörnamn.Text, tbxEfternamn.Text, tbxAdress.Text, tbxTelefon.Text, (string)cbxFulltPaketTid.SelectedItem, cbxFulltPaket.Checked);
-            AktuellaKunder.Add(item);
-            updateListView();
+            if (cbxFulltPaket.Checked == false && ( cbxFulltPaketTid.Text == "1 h" || cbxFulltPaketTid.Text == "2 h" || cbxFulltPaketTid.Text == "3 h"))
+            {
+                MessageBox.Show("Du kan inte ange hyrtid på utrustning du inte hyrt!");
+            }
+            else
+            {
+                Kund item = new Kund(tbxFörnamn.Text, tbxEfternamn.Text, tbxAdress.Text, tbxTelefon.Text, (string)cbxFulltPaketTid.SelectedItem, cbxFulltPaket.Checked);
+                AktuellaKunder.Add(item);
+                updateListView();
+            }
+            
         }
 
         private void btnÄndraKunduppgifter_Click(object sender, EventArgs e)
