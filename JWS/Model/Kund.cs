@@ -102,12 +102,12 @@ namespace JWS.Model
         {
             if (fulltPaket == true)
             {
-                return "Ja" + this.fulltPaketTid;
+                return "Ja" + "\t" + this.fulltPaketTid;
             }
 
             else
             {
-                return "Nej" + this.fulltPaketTid;
+                return "Nej" + "\t" + this.fulltPaketTid;
             }
         }
 
