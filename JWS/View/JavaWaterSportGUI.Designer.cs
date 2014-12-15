@@ -154,7 +154,7 @@
             this.cbxFulltPaketTid.Name = "cbxFulltPaketTid";
             this.cbxFulltPaketTid.Size = new System.Drawing.Size(72, 21);
             this.cbxFulltPaketTid.TabIndex = 12;
-            this.cbxFulltPaketTid.Text = "Hyrtid";
+            this.cbxFulltPaketTid.Text = "Välj hyrtid";
             // 
             // lblRegistreraKund
             // 
@@ -197,7 +197,7 @@
             // lblPrisPerTimme
             // 
             this.lblPrisPerTimme.AutoSize = true;
-            this.lblPrisPerTimme.Location = new System.Drawing.Point(460, 47);
+            this.lblPrisPerTimme.Location = new System.Drawing.Point(470, 47);
             this.lblPrisPerTimme.Name = "lblPrisPerTimme";
             this.lblPrisPerTimme.Size = new System.Drawing.Size(42, 13);
             this.lblPrisPerTimme.TabIndex = 18;
@@ -210,6 +210,7 @@
             this.cbxDykinstruktör.Name = "cbxDykinstruktör";
             this.cbxDykinstruktör.Size = new System.Drawing.Size(121, 21);
             this.cbxDykinstruktör.TabIndex = 19;
+            this.cbxDykinstruktör.Text = "Välj Dykarinstruktör";
             // 
             // cbxTidDykarkurs
             // 
@@ -221,10 +222,10 @@
             "3 h"});
             this.cbxTidDykarkurs.Location = new System.Drawing.Point(383, 44);
             this.cbxTidDykarkurs.Name = "cbxTidDykarkurs";
-            this.cbxTidDykarkurs.Size = new System.Drawing.Size(71, 21);
+            this.cbxTidDykarkurs.Size = new System.Drawing.Size(81, 21);
             this.cbxTidDykarkurs.TabIndex = 20;
             this.cbxTidDykarkurs.Tag = "";
-            this.cbxTidDykarkurs.Text = "Kurstid";
+            this.cbxTidDykarkurs.Text = "Välj kurstid";
             // 
             // btnTaBortKund
             // 

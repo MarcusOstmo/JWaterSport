@@ -16,6 +16,8 @@ namespace JWS.Model
         private string kund;
         private string fulltPaketTid;
         private bool fulltPaket;
+        private string dykinstruktör;
+        private string tidDykarkurs;
          
        
 
@@ -28,6 +30,8 @@ namespace JWS.Model
             this.telefon = "null";
             this.fulltPaketTid = "null";
             this.fulltPaket = false;
+            this.tidDykarkurs = "null";
+            this.dykinstruktör = "null";
         }
 
         /// <summary>
