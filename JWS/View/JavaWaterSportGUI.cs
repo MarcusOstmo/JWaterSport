@@ -30,9 +30,10 @@ namespace JWS.View
             lvwAktuellaKunder.Columns.Add("Förnamn", -2, HorizontalAlignment.Left);
             lvwAktuellaKunder.Columns.Add("Efternamn", -2, HorizontalAlignment.Left);
             lvwAktuellaKunder.Columns.Add("Adress", -2, HorizontalAlignment.Left);
-            lvwAktuellaKunder.Columns.Add("Telefon", -2, HorizontalAlignment.Left);
-            lvwAktuellaKunder.Columns.Add("Fullt Paket Bokat", -2, HorizontalAlignment.Left);
-            lvwAktuellaKunder.Columns.Add("Bokad Dykarkurs", -2, HorizontalAlignment.Left);
+            lvwAktuellaKunder.Columns.Add("Telefon      ", -2, HorizontalAlignment.Left);
+            lvwAktuellaKunder.Columns.Add("Fullt Paket Bokat (Tid)", -2, HorizontalAlignment.Left);
+            lvwAktuellaKunder.Columns.Add("Bokad Dykarkurs (Tid)", -2, HorizontalAlignment.Left);
+            updateListView();
         }
 
         private void updateListView()
@@ -46,8 +47,7 @@ namespace JWS.View
                 columns[1] = AktuellaKunder.Get(i).getEfternamn();
                 columns[2] = AktuellaKunder.Get(i).getAdress();
                 columns[3] = AktuellaKunder.Get(i).getTelefon();
-                columns[4] = AktuellaKunder.Get(i).getFulltPaket();
-                //columns[5] = AktuellaKunder.Get(i).get();
+                columns[4] = AktuellaKunder.Get(i).getFulltPaketOchPakettid();
                 item = new ListViewItem(columns);
                 lvwAktuellaKunder.Items.Add(item);
             }
@@ -55,7 +55,7 @@ namespace JWS.View
 
         private void btnRegistreraKund_Click(object sender, EventArgs e)
         {
-            Kund item = new Kund(tbxFörnamn.Text, tbxEfternamn.Text, tbxAdress.Text, tbxTelefon.Text, cbxFulltPaketTid.SelectedText, cbxFulltPaket.Checked);
+            Kund item = new Kund(tbxFörnamn.Text, tbxEfternamn.Text, tbxAdress.Text, tbxTelefon.Text, (string)cbxFulltPaketTid.SelectedItem, cbxFulltPaket.Checked);
             AktuellaKunder.Add(item);
             updateListView();
         }

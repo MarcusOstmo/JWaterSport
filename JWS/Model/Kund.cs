@@ -95,28 +95,19 @@ namespace JWS.Model
         }
 
         /// <summary>
-        /// Return pakettid
+        /// Return fullt paket(Ja/Nej) och pakettid
         /// </summary>
-        /// <returns>paketTid</returns>
-        public string getFulltPaketTid()
-        {
-            return this.fulltPaketTid;
-        }
-
-        /// <summary>
-        /// Return fullt paket
-        /// </summary>
-        /// <returns>fulltPaket</returns>
-        public string getFulltPaket()
+        /// <returns>fulltPaket(Ja/Nej) och pakettid</returns>
+        public string getFulltPaketOchPakettid()
         {
             if (fulltPaket == true)
             {
-                return "JA";
+                return "Ja" + this.fulltPaketTid;
             }
 
             else
             {
-                return "Nej";
+                return "Nej" + this.fulltPaketTid;
             }
         }
 
@@ -160,30 +151,23 @@ namespace JWS.Model
         }
 
         /// <summary>
-        /// Set PaketTid
+        /// Set FulltPaket och Pakettid
         /// </summary>
-        /// <param name="PaketTid">Tiden kunden hyr ett paket</param>
-        public void setfulltPaketTid(string fulltPaketTid)
-        {
-            this.fulltPaketTid = fulltPaketTid;
-        }
-
-        /// <summary>
-        /// Set FulltPaket
-        /// </summary>
-        /// <param name="StortPaket">Om kunden har bokat stort paket</param>
-        public void setFulltPaket(bool FulltPaket)
+        /// <param name="StortPaket">Om kunden har bokat stort paket och tiden kunden hyr ett paket</param>
+        public void setFulltPaketOchPakettid(bool FulltPaket, string FulltPakettid)
         {
             this.fulltPaket = FulltPaket;
+            this.fulltPaketTid = FulltPakettid;
         }
 
         #endregion
 
-        public override string ToString()
+       /* public override string ToString()
         {
             string response = this.förnamn + "\n" + this.efternamn + "\n" + this.adress + "\n" + this.telefon + "\n" + this.fulltPaket;
 
             return response;
         }
+        */
     }
 }

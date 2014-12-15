@@ -146,10 +146,15 @@
             // cbxFulltPaketTid
             // 
             this.cbxFulltPaketTid.FormattingEnabled = true;
+            this.cbxFulltPaketTid.Items.AddRange(new object[] {
+            "1 h",
+            "2 h",
+            "3 h"});
             this.cbxFulltPaketTid.Location = new System.Drawing.Point(115, 229);
             this.cbxFulltPaketTid.Name = "cbxFulltPaketTid";
             this.cbxFulltPaketTid.Size = new System.Drawing.Size(72, 21);
             this.cbxFulltPaketTid.TabIndex = 12;
+            this.cbxFulltPaketTid.Text = "Hyrtid";
             // 
             // lblRegistreraKund
             // 
@@ -208,11 +213,18 @@
             // 
             // cbxTidDykarkurs
             // 
+            this.cbxTidDykarkurs.AccessibleName = "";
             this.cbxTidDykarkurs.FormattingEnabled = true;
+            this.cbxTidDykarkurs.Items.AddRange(new object[] {
+            "1 h",
+            "2 h",
+            "3 h"});
             this.cbxTidDykarkurs.Location = new System.Drawing.Point(383, 44);
             this.cbxTidDykarkurs.Name = "cbxTidDykarkurs";
             this.cbxTidDykarkurs.Size = new System.Drawing.Size(71, 21);
             this.cbxTidDykarkurs.TabIndex = 20;
+            this.cbxTidDykarkurs.Tag = "";
+            this.cbxTidDykarkurs.Text = "Kurstid";
             // 
             // btnTaBortKund
             // 
@@ -260,8 +272,9 @@
             this.lvwAktuellaKunder.Location = new System.Drawing.Point(3, 3);
             this.lvwAktuellaKunder.Name = "lvwAktuellaKunder";
             this.lvwAktuellaKunder.Size = new System.Drawing.Size(653, 423);
-            this.lvwAktuellaKunder.TabIndex = 26;
+            this.lvwAktuellaKunder.TabIndex = 2;
             this.lvwAktuellaKunder.UseCompatibleStateImageBehavior = false;
+            this.lvwAktuellaKunder.View = System.Windows.Forms.View.Details;
             // 
             // tpeTidigareKunder
             // 
@@ -279,8 +292,9 @@
             this.lvwTidigareKunder.Location = new System.Drawing.Point(3, 3);
             this.lvwTidigareKunder.Name = "lvwTidigareKunder";
             this.lvwTidigareKunder.Size = new System.Drawing.Size(653, 423);
-            this.lvwTidigareKunder.TabIndex = 25;
+            this.lvwTidigareKunder.TabIndex = 2;
             this.lvwTidigareKunder.UseCompatibleStateImageBehavior = false;
+            this.lvwTidigareKunder.View = System.Windows.Forms.View.Details;
             // 
             // cbxFulltPaket
             // 
