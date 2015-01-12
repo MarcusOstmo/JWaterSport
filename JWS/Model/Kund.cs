@@ -41,7 +41,9 @@ namespace JWS.Model
         /// <param name="Efternamn">Kundens efternamn</param>
         /// <param name="Adress">Kundens adress</param>
         /// <param name="Telefon">Kundens telefonnummer</param>
-        public Kund(string Förnamn, string Efternamn, string Adress, string Telefon, string FulltPaketTid, bool FulltPaket)
+        /// <param name="FulltPaketTid">Kundens pakettid</param>
+        /// <param name="FulltPaket">Kunden bokat Fullt Paket</param>
+        public Kund(string Förnamn, string Efternamn, string Adress, string Telefon, string FulltPaketTid, bool FulltPaket, string TidDykarkurs, string Dykinstruktör)
         {
             this.förnamn = Förnamn;
             this.efternamn = Efternamn;
@@ -49,6 +51,8 @@ namespace JWS.Model
             this.telefon = Telefon;
             this.fulltPaketTid = FulltPaketTid;
             this.fulltPaket = FulltPaket;
+            this.tidDykarkurs = TidDykarkurs;
+            this.dykinstruktör = Dykinstruktör;
         }
 
         #region Get
@@ -106,12 +110,12 @@ namespace JWS.Model
         {
             if (fulltPaket == true)
             {
-                return "Ja" + "\t" + this.fulltPaketTid;
+                return "Ja   " + this.fulltPaketTid;
             }
 
             else
             {
-                return "Nej" + "\t" + this.fulltPaketTid;
+                return "Nej  " + this.fulltPaketTid;
             }
         }
 
