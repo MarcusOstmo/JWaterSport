@@ -29,8 +29,8 @@ namespace JWS.View
             // Add Columns
             lvwAktuellaKunder.Columns.Add("Förnamn", -2, HorizontalAlignment.Left);
             lvwAktuellaKunder.Columns.Add("Efternamn", -2, HorizontalAlignment.Left);
-            lvwAktuellaKunder.Columns.Add("Adress", -2, HorizontalAlignment.Left);
-            lvwAktuellaKunder.Columns.Add("Telefon      ", -2, HorizontalAlignment.Left);
+            lvwAktuellaKunder.Columns.Add("Adress          ", -2, HorizontalAlignment.Left);
+            lvwAktuellaKunder.Columns.Add("Telefon         ", -2, HorizontalAlignment.Left);
             lvwAktuellaKunder.Columns.Add("Fullt Paket Bokat (Tid)", -2, HorizontalAlignment.Left);
             lvwAktuellaKunder.Columns.Add("Bokad Dykarkurs (Tid)", -2, HorizontalAlignment.Left);
             updateListView();
