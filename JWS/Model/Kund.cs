@@ -43,6 +43,8 @@ namespace JWS.Model
         /// <param name="Telefon">Kundens telefonnummer</param>
         /// <param name="FulltPaketTid">Kundens pakettid</param>
         /// <param name="FulltPaket">Kunden bokat Fullt Paket</param>
+        /// <param name="TidDykarkurs">Kunden har valt kurstid</param>
+        /// <param name="Dykinstruktör">Kunden har valt dykinstruktör</param>
         public Kund(string Förnamn, string Efternamn, string Adress, string Telefon, string FulltPaketTid, bool FulltPaket, string TidDykarkurs, string Dykinstruktör)
         {
             this.förnamn = Förnamn;
@@ -119,6 +121,15 @@ namespace JWS.Model
             }
         }
 
+        /// <summary>
+        /// Return tidDykarkurs och dykinstruktör
+        /// </summary>
+        /// <returns>tidDykarkurs och dykinstruktör</returns>
+        public string getTidDykarkursOchDykinstruktör()
+        {
+            return this.dykinstruktör + "   " + this.tidDykarkurs;
+        }
+
         #endregion 
 
         #region Set
@@ -166,6 +177,16 @@ namespace JWS.Model
         {
             this.fulltPaket = FulltPaket;
             this.fulltPaketTid = FulltPakettid;
+        }
+
+        /// <summary>
+        /// Set tidDykarkurs och dykinstruktör
+        /// </summary>
+        /// <param name="Telefon">Kundens valda kurstid och dykinstruktör</param>
+        public void setTidDykarkursOchDykinstruktör(string TidDykarkurs, string Dykarinstruktör)
+        {
+            this.tidDykarkurs = TidDykarkurs;
+            this.dykinstruktör = Dykarinstruktör;
         }
 
         #endregion

@@ -206,6 +206,9 @@
             // cbxDykinstruktör
             // 
             this.cbxDykinstruktör.FormattingEnabled = true;
+            this.cbxDykinstruktör.Items.AddRange(new object[] {
+            "Kevin Lundberg",
+            "Marcus Östmo"});
             this.cbxDykinstruktör.Location = new System.Drawing.Point(247, 44);
             this.cbxDykinstruktör.Name = "cbxDykinstruktör";
             this.cbxDykinstruktör.Size = new System.Drawing.Size(121, 21);
