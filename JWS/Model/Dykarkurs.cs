@@ -36,21 +36,12 @@ namespace JWS.Model
         }
 
         /// <summary>
-        /// Return tidDykarkurs
+        /// Return tidDykarkurs och dykinstruktör
         /// </summary>
-        /// <returns>tidDykarkurs</returns>
-        public string getTidDykarkurs()
+        /// <returns>tidDykarkurs och dykinstruktör</returns>
+        public string getTidDykarkursOchDykinstruktör()
         {
-            return this.tidDykarkurs;
-        }
-
-        /// <summary>
-        /// Return dykinstruktör
-        /// </summary>
-        /// <returns>dykinstruktör</returns>
-        public string getDykinstruktör()
-        {
-            return this.dykinstruktör;
+            return this.dykinstruktör + "   " + this.tidDykarkurs;
         }
 
         /// <summary>
@@ -63,20 +54,12 @@ namespace JWS.Model
         }
 
         /// <summary>
-        /// Set tidDykarkurs 
+        /// Set tidDykarkurs och dykinstruktör
         /// </summary>
-        /// <param name="Telefon">Kundens valda kurstid</param>
-        public void setTidDykarkurs(string TidDykarkurs)
+        /// <param name="Telefon">Kundens valda kurstid och dykinstruktör</param>
+        public void setTidDykarkursOchDykinstruktör(string TidDykarkurs, string Dykinstruktör)
         {
             this.tidDykarkurs = TidDykarkurs;
-        }
-
-        /// <summary>
-        /// Set dykinstruktör
-        /// </summary>
-        /// <param name="Telefon">Kundens valda dykinstruktör</param>
-        public void setDykinstruktör(string Dykinstruktör)
-        {
             this.dykinstruktör = Dykinstruktör;
         }
     }

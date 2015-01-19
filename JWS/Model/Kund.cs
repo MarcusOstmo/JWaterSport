@@ -13,13 +13,6 @@ namespace JWS.Model
         private string efternamn;
         private string adress;
         private string telefon;
-        private string kund;
-        private string fulltPaketTid;
-        private bool fulltPaket;
-        private string dykinstruktör;
-        private string tidDykarkurs;
-         
-       
 
         // default konstruktor
         public Kund()
@@ -28,10 +21,6 @@ namespace JWS.Model
             this.efternamn = "null";
             this.adress = "null";
             this.telefon = "null";
-            this.fulltPaketTid = "null";
-            this.fulltPaket = false;
-            this.tidDykarkurs = "null";
-            this.dykinstruktör = "null";
         }
 
         /// <summary>
@@ -41,20 +30,12 @@ namespace JWS.Model
         /// <param name="Efternamn">Kundens efternamn</param>
         /// <param name="Adress">Kundens adress</param>
         /// <param name="Telefon">Kundens telefonnummer</param>
-        /// <param name="FulltPaketTid">Kundens pakettid</param>
-        /// <param name="FulltPaket">Kunden bokat Fullt Paket</param>
-        /// <param name="TidDykarkurs">Kunden har valt kurstid</param>
-        /// <param name="Dykinstruktör">Kunden har valt dykinstruktör</param>
-        public Kund(string Förnamn, string Efternamn, string Adress, string Telefon, string FulltPaketTid, bool FulltPaket, string TidDykarkurs, string Dykinstruktör)
+        public Kund(string Förnamn, string Efternamn, string Adress, string Telefon)
         {
             this.förnamn = Förnamn;
             this.efternamn = Efternamn;
             this.adress = Adress;
             this.telefon = Telefon;
-            this.fulltPaketTid = FulltPaketTid;
-            this.fulltPaket = FulltPaket;
-            this.tidDykarkurs = TidDykarkurs;
-            this.dykinstruktör = Dykinstruktör;
         }
 
         #region Get
@@ -76,15 +57,6 @@ namespace JWS.Model
             return this.efternamn;
         }
 
-        /// <summary>
-        /// Return kund
-        /// </summary>
-        /// <returns>kund</returns>
-        public string getKund()
-        {
-            return this.kund;
-        }
-
 
         /// <summary>
         /// Return adress
@@ -102,32 +74,6 @@ namespace JWS.Model
         public string getTelefon()
         {
             return this.telefon;
-        }
-
-        /// <summary>
-        /// Return fullt paket(Ja/Nej) och pakettid
-        /// </summary>
-        /// <returns>fulltPaket(Ja/Nej) och pakettid</returns>
-        public string getFulltPaketOchPakettid()
-        {
-            if (fulltPaket == true)
-            {
-                return "Ja   " + this.fulltPaketTid;
-            }
-
-            else
-            {
-                return "Nej  " + this.fulltPaketTid;
-            }
-        }
-
-        /// <summary>
-        /// Return tidDykarkurs och dykinstruktör
-        /// </summary>
-        /// <returns>tidDykarkurs och dykinstruktör</returns>
-        public string getTidDykarkursOchDykinstruktör()
-        {
-            return this.dykinstruktör + "   " + this.tidDykarkurs;
         }
 
         #endregion 
@@ -169,34 +115,6 @@ namespace JWS.Model
             this.telefon = Telefon;
         }
 
-        /// <summary>
-        /// Set FulltPaket och Pakettid
-        /// </summary>
-        /// <param name="StortPaket">Om kunden har bokat stort paket och tiden kunden hyr ett paket</param>
-        public void setFulltPaketOchPakettid(bool FulltPaket, string FulltPakettid)
-        {
-            this.fulltPaket = FulltPaket;
-            this.fulltPaketTid = FulltPakettid;
-        }
-
-        /// <summary>
-        /// Set tidDykarkurs och dykinstruktör
-        /// </summary>
-        /// <param name="Telefon">Kundens valda kurstid och dykinstruktör</param>
-        public void setTidDykarkursOchDykinstruktör(string TidDykarkurs, string Dykinstruktör)
-        {
-            this.tidDykarkurs = TidDykarkurs;
-            this.dykinstruktör = Dykinstruktör;
-        }
-
         #endregion
-
-       /* public override string ToString()
-        {
-            string response = this.förnamn + "\n" + this.efternamn + "\n" + this.adress + "\n" + this.telefon + "\n" + this.fulltPaket;
-
-            return response;
-        }
-        */
     }
 }

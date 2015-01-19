@@ -15,11 +15,12 @@ namespace JWS.View
     public partial class JavaWaterSportGUI : Form
     {
         private KundList AktuellaKunder;
-        private KundList BokaDykarkurs;
+        private KundList Dykarkurser;
         public JavaWaterSportGUI()
         {
             InitializeComponent();
             AktuellaKunder = new KundList();
+            Dykarkurser = new KundList();
             initListView();
         }
 
@@ -33,7 +34,10 @@ namespace JWS.View
             lvwAktuellaKunder.Columns.Add("Adress           ", -2, HorizontalAlignment.Left);
             lvwAktuellaKunder.Columns.Add("Telefon          ", -2, HorizontalAlignment.Left);
             lvwAktuellaKunder.Columns.Add("Fullt Paket Bokat (Tid)", -2, HorizontalAlignment.Left);
-            lvwAktuellaKunder.Columns.Add("Bokad Dykarkurs (Tid)", -2, HorizontalAlignment.Left);
+            lvwAktuellaKunder.Columns.Add("Bokad Dykarkurs (Datum & Tid)", -2, HorizontalAlignment.Left);
+            lvwDykarkurser.Columns.Add("Datum", -2, HorizontalAlignment.Left);
+            lvwDykarkurser.Columns.Add("Tid", -2, HorizontalAlignment.Left);
+            lvwDykarkurser.Columns.Add("Dykinstruktör", -2, HorizontalAlignment.Left);
             updateListView();
         }
 
@@ -48,11 +52,20 @@ namespace JWS.View
                 columns[1] = AktuellaKunder.Get(i).getEfternamn();
                 columns[2] = AktuellaKunder.Get(i).getAdress();
                 columns[3] = AktuellaKunder.Get(i).getTelefon();
-                columns[4] = AktuellaKunder.Get(i).getFulltPaketOchPakettid();
-                columns[5] = AktuellaKunder.Get(i).getTidDykarkursOchDykinstruktör();
+                //columns[4] = AktuellaKunder.Get(i).getFulltPaketOchPakettid();
+                //columns[5] = AktuellaKunder.Get(i).getTidDykarkursOchDykinstruktör();
                 item = new ListViewItem(columns);
                 lvwAktuellaKunder.Items.Add(item);
             }            
+        }
+
+        private void addTestData()
+        {
+            Dykarkurs item = new Dykarkurs("2015-06-04", "10.00-13.00", "Kevin Lundberg");
+            myList.Add(item);
+            item = new Movie("Moneyball", 133, "Drama", "Bennett Miller", 13);
+            myList.Add(item);
+            updateListView();
         }
 
         private void btnRegistreraKund_Click(object sender, EventArgs e)
@@ -67,7 +80,7 @@ namespace JWS.View
             }
             else
             {
-                Kund item = new Kund(tbxFörnamn.Text, tbxEfternamn.Text, tbxAdress.Text, tbxTelefon.Text, (string)cbxFulltPaketTid.SelectedItem, cbxFulltPaket.Checked, (string)cbxTidDykarkurs.SelectedItem, (string)cbxDykinstruktör.SelectedItem);
+                Kund item = new Kund(tbxFörnamn.Text, tbxEfternamn.Text, tbxAdress.Text, tbxTelefon.Text);
                 AktuellaKunder.Add(item);
                 updateListView();
             }
@@ -81,7 +94,7 @@ namespace JWS.View
 
         private void btnBokaDykarkurs_Click(object sender, EventArgs e)
         {
-
+            Dykarkurs item = new Dykarkurs((string)cbxTidDykarkurs.SelectedItem, (string)cbxDykinstruktör.SelectedItem);
         }
 
         private void btnÄndraKursuppgifter_Click(object sender, EventArgs e)

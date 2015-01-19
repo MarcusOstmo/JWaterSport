@@ -54,9 +54,13 @@
             this.tpeTidigareKunder = new System.Windows.Forms.TabPage();
             this.lvwTidigareKunder = new System.Windows.Forms.ListView();
             this.cbxFulltPaket = new System.Windows.Forms.CheckBox();
+            this.btnLäggTillDykarkurs = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lvwDykarkurser = new System.Windows.Forms.ListView();
             this.tclKundList.SuspendLayout();
             this.tpeAktuellaKunder.SuspendLayout();
             this.tpeTidigareKunder.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFörnamn
@@ -254,6 +258,7 @@
             // 
             this.tclKundList.Controls.Add(this.tpeAktuellaKunder);
             this.tclKundList.Controls.Add(this.tpeTidigareKunder);
+            this.tclKundList.Controls.Add(this.tabPage1);
             this.tclKundList.Location = new System.Drawing.Point(533, 12);
             this.tclKundList.Name = "tclKundList";
             this.tclKundList.SelectedIndex = 0;
@@ -310,11 +315,40 @@
             this.cbxFulltPaket.Text = "Fullt Paket";
             this.cbxFulltPaket.UseVisualStyleBackColor = true;
             // 
+            // btnLäggTillDykarkurs
+            // 
+            this.btnLäggTillDykarkurs.Location = new System.Drawing.Point(26, 350);
+            this.btnLäggTillDykarkurs.Name = "btnLäggTillDykarkurs";
+            this.btnLäggTillDykarkurs.Size = new System.Drawing.Size(106, 23);
+            this.btnLäggTillDykarkurs.TabIndex = 26;
+            this.btnLäggTillDykarkurs.Text = "Lägg till Dykarkurs";
+            this.btnLäggTillDykarkurs.UseVisualStyleBackColor = true;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.lvwDykarkurser);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(659, 429);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Dykarkurser";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lvwDykarkurser
+            // 
+            this.lvwDykarkurser.Location = new System.Drawing.Point(3, 3);
+            this.lvwDykarkurser.Name = "lvwDykarkurser";
+            this.lvwDykarkurser.Size = new System.Drawing.Size(653, 423);
+            this.lvwDykarkurser.TabIndex = 27;
+            this.lvwDykarkurser.UseCompatibleStateImageBehavior = false;
+            this.lvwDykarkurser.View = System.Windows.Forms.View.Details;
+            // 
             // JavaWaterSportGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 516);
+            this.Controls.Add(this.btnLäggTillDykarkurs);
             this.Controls.Add(this.cbxFulltPaket);
             this.Controls.Add(this.tclKundList);
             this.Controls.Add(this.btnSkrivUtKund);
@@ -342,6 +376,7 @@
             this.tclKundList.ResumeLayout(false);
             this.tpeAktuellaKunder.ResumeLayout(false);
             this.tpeTidigareKunder.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,5 +410,8 @@
         private System.Windows.Forms.ListView lvwAktuellaKunder;
         private System.Windows.Forms.ListView lvwTidigareKunder;
         private System.Windows.Forms.CheckBox cbxFulltPaket;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.ListView lvwDykarkurser;
+        private System.Windows.Forms.Button btnLäggTillDykarkurs;
     }
 }
