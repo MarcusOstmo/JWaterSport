@@ -15,6 +15,7 @@ namespace JWS.View
     public partial class JavaWaterSportGUI : Form
     {
         private KundList AktuellaKunder;
+        private KundList BokaDykarkurs;
         public JavaWaterSportGUI()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace JWS.View
         private void updateListView()
         {
             lvwAktuellaKunder.Items.Clear();
-            string[] columns = new string[5];
+            string[] columns = new string[6];
             ListViewItem item;
             for (int i = 0; i < AktuellaKunder.Count(); i++)
             {

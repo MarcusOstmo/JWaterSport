@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controler\KundList.cs" />
+    <Compile Include="Model\Dykarkurs.cs" />
     <Compile Include="Model\Kund.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

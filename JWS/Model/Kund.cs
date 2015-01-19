@@ -183,10 +183,10 @@ namespace JWS.Model
         /// Set tidDykarkurs och dykinstruktör
         /// </summary>
         /// <param name="Telefon">Kundens valda kurstid och dykinstruktör</param>
-        public void setTidDykarkursOchDykinstruktör(string TidDykarkurs, string Dykarinstruktör)
+        public void setTidDykarkursOchDykinstruktör(string TidDykarkurs, string Dykinstruktör)
         {
             this.tidDykarkurs = TidDykarkurs;
-            this.dykinstruktör = Dykarinstruktör;
+            this.dykinstruktör = Dykinstruktör;
         }
 
         #endregion
