@@ -28,6 +28,8 @@ namespace JWS.View
         {
             lvwAktuellaKunder.FullRowSelect = true;
             lvwAktuellaKunder.GridLines = true;
+            lvwDykarkurser.FullRowSelect = true;
+            lvwDykarkurser.GridLines = true;
             // Add Columns
             lvwAktuellaKunder.Columns.Add("Förnamn", -2, HorizontalAlignment.Left);
             lvwAktuellaKunder.Columns.Add("Efternamn", -2, HorizontalAlignment.Left);
@@ -36,37 +38,46 @@ namespace JWS.View
             lvwAktuellaKunder.Columns.Add("Fullt Paket Bokat (Tid)", -2, HorizontalAlignment.Left);
             lvwAktuellaKunder.Columns.Add("Bokad Dykarkurs (Datum & Tid)", -2, HorizontalAlignment.Left);
             lvwDykarkurser.Columns.Add("Datum", -2, HorizontalAlignment.Left);
-            lvwDykarkurser.Columns.Add("Tid", -2, HorizontalAlignment.Left);
-            lvwDykarkurser.Columns.Add("Dykinstruktör", -2, HorizontalAlignment.Left);
+            lvwDykarkurser.Columns.Add("Dykinstruktör och tid", -2, HorizontalAlignment.Left);
             updateListView();
         }
 
         private void updateListView()
         {
             lvwAktuellaKunder.Items.Clear();
-            string[] columns = new string[6];
-            ListViewItem item;
+            lvwDykarkurser.Items.Clear();
+            string[] columnsAktuellaKunder = new string[6];
+            string[] columnsDykarkurser = new string[2];
+            ListViewItem itemAktuellaKunder;
+            ListViewItem itemDykarkurser;
             for (int i = 0; i < AktuellaKunder.Count(); i++)
             {
-                columns[0] = AktuellaKunder.Get(i).getFörnamn();
-                columns[1] = AktuellaKunder.Get(i).getEfternamn();
-                columns[2] = AktuellaKunder.Get(i).getAdress();
-                columns[3] = AktuellaKunder.Get(i).getTelefon();
-                //columns[4] = AktuellaKunder.Get(i).getFulltPaketOchPakettid();
-                //columns[5] = AktuellaKunder.Get(i).getTidDykarkursOchDykinstruktör();
-                item = new ListViewItem(columns);
-                lvwAktuellaKunder.Items.Add(item);
-            }            
+                columnsAktuellaKunder[0] = AktuellaKunder.Get(i).getFörnamn();
+                columnsAktuellaKunder[1] = AktuellaKunder.Get(i).getEfternamn();
+                columnsAktuellaKunder[2] = AktuellaKunder.Get(i).getAdress();
+                columnsAktuellaKunder[3] = AktuellaKunder.Get(i).getTelefon();
+                //columnsAktuellaKunder[4] = AktuellaKunder.Get(i).getFulltPaketOchPakettid();
+                //columnsAktuellaKunder[5] = AktuellaKunder.Get(i).getTidDykarkursOchDykinstruktör();
+                itemAktuellaKunder = new ListViewItem(columnsAktuellaKunder);
+                lvwAktuellaKunder.Items.Add(itemAktuellaKunder);
+            }
+            for (int i = 0; i < Dykarkurser.Count(); i++)
+            {
+                columnsDykarkurser[0] = Dykarkurser.Get(i).getDatum();
+                columnsDykarkurser[1] = Dykarkurser.Get(i).getTidDykarkursOchDykinstruktör();
+                itemDykarkurser = new ListViewItem(columnsDykarkurser);
+                lvwDykarkurser.Items.Add(itemDykarkurser);
+            }
         }
 
-        private void addTestData()
-        {
-            Dykarkurs item = new Dykarkurs("2015-06-04", "10.00-13.00", "Kevin Lundberg");
-            myList.Add(item);
-            item = new Movie("Moneyball", 133, "Drama", "Bennett Miller", 13);
-            myList.Add(item);
-            updateListView();
-        }
+        //private void addTestData()
+        //{
+        //    Dykarkurs item = new Dykarkurs("2015-06-04", "10.00-13.00", "Kevin Lundberg");
+        //    Dykarkurser.Add(item);
+        //    item = new Dykarkurs("2015-07-04","10-13.00","Marcus Östmo");
+        //    Dykarkurser.Add(item);
+        //    updateListView();
+        //}
 
         private void btnRegistreraKund_Click(object sender, EventArgs e)
         {

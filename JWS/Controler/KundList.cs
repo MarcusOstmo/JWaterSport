@@ -13,7 +13,7 @@ namespace JWS.Controler
 
         public KundList()
         {
-            myKund = new List<Kund>();
+            myKund = ListProvider.getKundLista(); List<Kund>();
         }
 
         public void Add(Kund item)

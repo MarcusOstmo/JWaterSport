@@ -8,6 +8,7 @@ namespace JWS.Model
 {
     class Dykarkurs
     {
+        int kursid;
         private string datum;
         private string tidDykarkurs;
         private string dykinstruktör;

@@ -9,6 +9,7 @@ namespace JWS.Model
     class Kund
     {
         //medlemsvariabler
+        int kund_id;
         private string förnamn;
         private string efternamn;
         private string adress;
